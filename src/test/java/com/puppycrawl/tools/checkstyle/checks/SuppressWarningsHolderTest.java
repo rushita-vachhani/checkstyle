@@ -456,7 +456,7 @@ public class SuppressWarningsHolderTest extends AbstractModuleTestSupport {
     public void testWithAndWithoutCheckSuffixDifferentCases() throws Exception {
         final String pattern = "^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$";
         final String[] expected = {
-            "16:30: " + getCheckMessage(ConstantNameCheck.class,
+            "20:30: " + getCheckMessage(ConstantNameCheck.class,
                 AbstractNameCheck.MSG_INVALID_PATTERN, "a", pattern),
         };
 
@@ -482,9 +482,9 @@ public class SuppressWarningsHolderTest extends AbstractModuleTestSupport {
     public void testAliasList2() throws Exception {
         final String pattern = "^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$";
         final String[] expected = {
-            "16:29: " + getCheckMessage(ConstantNameCheck.class,
+            "20:29: " + getCheckMessage(ConstantNameCheck.class,
                 AbstractNameCheck.MSG_INVALID_PATTERN, "a", pattern),
-            "19:30: " + getCheckMessage(ConstantNameCheck.class,
+            "23:30: " + getCheckMessage(ConstantNameCheck.class,
                 AbstractNameCheck.MSG_INVALID_PATTERN, "b", pattern),
         };
 
@@ -511,9 +511,9 @@ public class SuppressWarningsHolderTest extends AbstractModuleTestSupport {
     public void testAliasList4() throws Exception {
         final String pattern = "^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$";
         final String[] expected = {
-            "16:30: " + getCheckMessage(ConstantNameCheck.class,
+            "20:30: " + getCheckMessage(ConstantNameCheck.class,
                 AbstractNameCheck.MSG_INVALID_PATTERN, "a", pattern),
-            "19:30: " + getCheckMessage(ConstantNameCheck.class,
+            "23:30: " + getCheckMessage(ConstantNameCheck.class,
                 AbstractNameCheck.MSG_INVALID_PATTERN, "b", pattern),
         };
 
@@ -581,9 +581,9 @@ public class SuppressWarningsHolderTest extends AbstractModuleTestSupport {
     @Test
     public void testIdent2() throws Exception {
         final String[] expected = {
-            "37:9: " + getCheckMessage(UnusedLocalVariableCheck.class,
+            "40:9: " + getCheckMessage(UnusedLocalVariableCheck.class,
                     MSG_UNUSED_LOCAL_VARIABLE, "a"),
-            "42:9: " + getCheckMessage(UnusedLocalVariableCheck.class,
+            "45:9: " + getCheckMessage(UnusedLocalVariableCheck.class,
                     MSG_UNUSED_LOCAL_VARIABLE, "a"),
         };
         verifyWithInlineConfigParser(
